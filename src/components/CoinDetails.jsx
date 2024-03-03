@@ -8,17 +8,19 @@ import {useParams} from 'react-router-dom';
 import Chart from './Chart';
 
 const CoinDetails = () => {
+
   const [coin,setcoin]=useState({});
   const [loading,setloading]=useState(true);
   const [error,seterror]=useState(false);
   const [days,setdays]=useState('24h');
   const [chartArray,setChartArray]=useState([]);
- 
   const[currency,setcurrency]=useState('inr');
+  
   const currenysym=
   currency==='inr' ? "₹" :'$';
 
   const params=useParams();
+
 
   const btns=['24h','7d','14d','30d','60d','200d','max'];
 

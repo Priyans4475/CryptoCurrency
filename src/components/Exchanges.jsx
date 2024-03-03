@@ -12,7 +12,7 @@ const Exchanges = () => {
 
   useEffect(() => {
     const fetchExchanges=async()=>{
-    try{const {data} =await axios.get(`${server}/exchangwes?per_page=20`);
+    try{const {data} =await axios.get(`${server}/exchanges?per_page=20`);
     console.log(data);
     setexchanges(data);
     setloading(false);}
